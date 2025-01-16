@@ -8,7 +8,7 @@ path = str(Path())
 pathList = glob(path + "/notas/*.xml")
 soupList = []
 for path in pathList:
-    file = open(path, "r")
+    file = open(path, "r", encoding='utf-8')
     soupList.append(BeautifulSoup(file.read(), 'lxml-xml'))
     file.close()
 
